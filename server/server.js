@@ -43,8 +43,8 @@ app.get("/todos/:id",(req, res) => {
         if(todo) {
            return res.status(200).send({todo});
         }
-        res.status(400).send({});
-    }).catch(e => res.status(400).send());
+        res.status(404).send({});
+    }).catch(e => res.status(404).send());
     //validate id using isValid
     // if not valid return 404, send back empty body
 
